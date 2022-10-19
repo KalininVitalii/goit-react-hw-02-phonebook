@@ -64,9 +64,14 @@ export class ContactForm extends React.Component {
     event.preventDefault();
     console.log(this.state)
     this.props.onSubmit(this.state)
+    this.cleanField()
+  }
+
+    cleanField = () => {
     this.setState({ name: '' })
     this.setState({ number: ''})
   }
+
 
   render() {
     return (
